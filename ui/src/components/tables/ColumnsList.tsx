@@ -28,13 +28,24 @@ export default function ColumnsList({
           title: 'Name',
           dataIndex: 'name',
           key: 'name',
-          width: '60%',
+          width: '30%',
         },
         {
           title: 'Type',
           dataIndex: 'type_name',
           key: 'type',
+          width: '30%',
+        },
+        {
+          title: 'Comment',
+          dataIndex: 'comment',
+          key: 'comment',
           width: '40%',
+          render: (comment) => (
+            <Typography.Text type="secondary">
+              {comment || '—'}
+            </Typography.Text>
+          ),
         },
       ]}
     />
